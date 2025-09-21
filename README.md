@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+# MyPortfolio
 
-## Project info
+A personal portfolio website built with React, TypeScript, and Vite. This project showcases typical portfolio sections such as About, Skills, Projects, Experience, Education, Achievements, and Contact, all styled with Tailwind CSS and enhanced with Radix UI components.
 
-**URL**: https://lovable.dev/projects/3a135479-997b-4237-bec6-4dc3b98fcdc1
+## Technologies Used
 
-## How can I edit this code?
+- React 18
+- TypeScript
+- Vite (build tool)
+- Tailwind CSS (utility-first CSS framework)
+- Radix UI (accessible UI components)
+- React Router DOM (client-side routing)
+- React Query (data fetching and caching)
+- Framer Motion (animations)
+- Zod (schema validation)
+- ESLint (linting)
+- Other libraries: Lucide React, Sonner, React Hook Form, Date-fns, Embla Carousel, and more
 
-There are several ways of editing your application.
+## Project Structure
 
-**Use Lovable**
+- `src/` - Source code directory
+  - `components/` - Reusable UI components (Navigation, Hero, About, Skills, Projects, etc.)
+  - `contexts/` - React context providers (e.g., ThemeContext)
+  - `hooks/` - Custom React hooks
+  - `lib/` - Utility functions
+  - `pages/` - Page components (Index, NotFound)
+  - `App.tsx` - Main application component with routing and providers
+  - `main.tsx` - Application entry point
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3a135479-997b-4237-bec6-4dc3b98fcdc1) and start prompting.
+- `public/` - Static assets like favicon and robots.txt
 
-Changes made via Lovable will be committed automatically to this repo.
+- Configuration files for Vite, Tailwind CSS, ESLint, TypeScript, and PostCSS
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Install dependencies using npm:
 
-Follow these steps:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Development Server
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Start the development server with hot module replacement:
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open your browser and navigate to `http://localhost:5173` (or the port shown in the terminal).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build
 
-**Use GitHub Codespaces**
+Build the project for production:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+### Preview
 
-This project is built with:
+Preview the production build locally:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run preview
+```
 
-## How can I deploy this project?
+### Linting
 
-Simply open [Lovable](https://lovable.dev/projects/3a135479-997b-4237-bec6-4dc3b98fcdc1) and click on Share -> Publish.
+Run ESLint to check for code quality issues:
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+npm run lint
+```
 
-Yes, you can!
+## Features
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Responsive and accessible UI built with Radix UI components
+- Theming support via React context
+- Client-side routing with React Router DOM
+- Notifications and toasts using Sonner and custom toaster components
+- Form handling with React Hook Form and validation with Zod
+- Smooth animations with Framer Motion
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## License
+
+This project is private. Add your license information here if applicable.

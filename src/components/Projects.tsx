@@ -18,7 +18,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'AI Chat Application',
+    title: 'ChatBotFusionHub',
     description: 'Real-time chat application with AI integration using OpenAI API. Built with Next.js and Socket.io for seamless communication.',
     image: '/api/placeholder/600/400',
     category: 'AI/ML',

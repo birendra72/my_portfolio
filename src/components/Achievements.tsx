@@ -111,7 +111,7 @@ const achievements = [
 ];
 
 const stats = [
-  { label: 'Hackathons Won', value: '3', icon: Trophy },
+  { label: 'Hackathons Won', value: '', icon: Trophy },
   { label: 'Open Source PRs', value: '25+', icon: Code },
   { label: 'Students Mentored', value: '50+', icon: Users },
   { label: 'Projects Launched', value: '12', icon: Target },

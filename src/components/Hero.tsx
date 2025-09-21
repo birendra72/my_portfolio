@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <span className="block">Hi, I'm</span>
-              <span className="gradient-text block">Your Name</span>
+              <span className="gradient-text block">Birendra Singh</span>
             </motion.h1>
 
             {/* Animated Role */}
@@ -143,9 +143,9 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 1.3 }}
           >
             {[
-              { Icon: Github, href: 'https://github.com', label: 'GitHub' },
-              { Icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-              { Icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+              { Icon: Github, href: 'https://github.com/birendra72', label: 'GitHub' },
+              { Icon: Linkedin, href: 'https://www.linkedin.com/in/birendra-singh-85a95a299', label: 'LinkedIn' },
+              { Icon: Twitter, href: 'https://x.com/BirendraSi43813', label: 'Twitter' },
             ].map(({ Icon, href, label }) => (
               <motion.a
                 key={label}

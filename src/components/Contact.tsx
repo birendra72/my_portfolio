@@ -11,19 +11,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'your.email@example.com',
-    href: 'mailto:your.email@example.com'
+    value: 'birendrasingh7200@gmail.com',
+    href: 'mailto:birendrasingh7200@gmail.com'
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567'
+    value: '+918700485920',
+    href: 'tel:+918700485920'
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Your City, State',
+    value: 'Agra, Uttar Pradesh, India',
     href: null
   }
 ];
@@ -32,19 +32,19 @@ const socialLinks = [
   {
     icon: Github,
     label: 'GitHub',
-    href: 'https://github.com/yourusername',
+    href: 'https://github.com/birendra72',
     color: 'hover:text-gray-900 dark:hover:text-gray-100'
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/yourprofile',
+    href: 'https://www.linkedin.com/in/birendra-singh-85a95a299',
     color: 'hover:text-blue-600'
   },
   {
     icon: Twitter,
     label: 'Twitter',
-    href: 'https://twitter.com/yourusername',
+    href: 'https://x.com/BirendraSi43813',
     color: 'hover:text-blue-400'
   }
 ];
@@ -346,7 +346,7 @@ export const Contact: React.FC = () => {
               <Button
                 variant="outline"
                 className="btn-secondary flex items-center space-x-2"
-                onClick={() => window.open('mailto:your.email@example.com', '_blank')}
+                onClick={() => window.open('mailto:birendrasingh7200@gmail.com', '_blank')}
               >
                 <Mail className="w-4 h-4" />
                 <span>Send Email</span>
@@ -354,7 +354,7 @@ export const Contact: React.FC = () => {
               <Button
                 variant="outline"
                 className="btn-secondary flex items-center space-x-2"
-                onClick={() => window.open('https://linkedin.com/in/yourprofile', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/birendra-singh-85a95a299', '_blank')}
               >
                 <Linkedin className="w-4 h-4" />
                 <span>Connect on LinkedIn</span>

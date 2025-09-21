@@ -5,22 +5,22 @@ import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from 'lucide-react';
 const socialLinks = [
   {
     icon: Github,
-    href: 'https://github.com/yourusername',
+    href: 'https://github.com/birendra72',
     label: 'GitHub'
   },
   {
     icon: Linkedin,
-    href: 'https://linkedin.com/in/yourprofile',
+    href: 'https://www.linkedin.com/in/birendra-singh-85a95a299',
     label: 'LinkedIn'
   },
   {
     icon: Twitter,
-    href: 'https://twitter.com/yourusername',
+    href: 'https://x.com/BirendraSi43813',
     label: 'Twitter'
   },
   {
     icon: Mail,
-    href: 'mailto:your.email@example.com',
+    href: 'mailto:birendrasingh7200@gmail.com',
     label: 'Email'
   }
 ];
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
                 className="mb-6"
               >
                 <h3 className="text-2xl font-bold gradient-text mb-4">
-                  Your Name
+                  Birendra Singh
                 </h3>
                 <p className="text-muted-foreground mb-2">
                   Future Tech Creator | Exploring, Assembling & Innovating Tech Stacks
@@ -147,12 +147,12 @@ export const Footer: React.FC = () => {
                       href="mailto:your.email@example.com"
                       className="text-sm hover:text-primary transition-colors duration-300"
                     >
-                      your.email@example.com
+                      birendrasingh7200@gmail.com
                     </a>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Location</p>
-                    <p className="text-sm">Your City, State</p>
+                    <p className="text-sm">Agra, Utter Pradesh</p>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Status</p>
@@ -179,7 +179,7 @@ export const Footer: React.FC = () => {
               viewport={{ once: true }}
               className="flex items-center space-x-2 text-sm text-muted-foreground"
             >
-              <span>© {new Date().getFullYear()} Your Name. Made with</span>
+              <span>© {new Date().getFullYear()} Birendra Singh. Made with</span>
               <Heart className="w-4 h-4 text-red-500 animate-pulse" />
               <span>and lots of coffee.</span>
             </motion.div>
@@ -192,7 +192,7 @@ export const Footer: React.FC = () => {
               className="flex items-center space-x-6"
             >
               <div className="text-sm text-muted-foreground">
-                Built with React, TypeScript & Tailwind CSS
+                {/* Built with React, TypeScript & Tailwind CSS */}
               </div>
               <button
                 onClick={scrollToTop}
