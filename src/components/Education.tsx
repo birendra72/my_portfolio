@@ -6,11 +6,11 @@ import { GraduationCap, Calendar, MapPin, Award, BookOpen } from 'lucide-react';
 const education = [
   {
     id: 1,
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'Your University Name',
-    location: 'City, State',
-    period: '2021 - 2025 (Expected)',
-    gpa: '3.8/4.0',
+    degree: 'B.Tech in Computer Science and Engineering',
+    institution: 'Raja Balwant Singh Engineering Technical Campus Bichpuri, Agra',
+    location: 'Agra, Uttar Pradesh, India',
+    period: '2023 - 2026 (Expected)',
+    gpa: '7.2/10',
     status: 'In Progress',
     description: 'Comprehensive study of computer science fundamentals including algorithms, data structures, software engineering, and system design.',
     coursework: [
@@ -30,55 +30,55 @@ const education = [
       'Member of ACM Student Chapter'
     ]
   },
-  {
-    id: 2,
-    degree: 'High School Diploma',
-    institution: 'Your High School Name',
-    location: 'City, State',
-    period: '2017 - 2021',
-    gpa: '3.9/4.0',
-    status: 'Completed',
-    description: 'Graduated with honors, focusing on STEM subjects and early computer science exposure.',
-    coursework: [
-      'AP Computer Science A',
-      'AP Calculus BC',
-      'AP Physics C',
-      'AP Chemistry',
-      'Advanced Mathematics',
-      'Technical Writing'
-    ],
-    achievements: [
-      'Valedictorian (Top 1% of graduating class)',
-      'National Honor Society member',
-      'Science Fair Winner - Computer Science Category',
-      'Robotics Team Captain - State Championship'
-    ]
-  }
+  // {
+  //   id: 2,
+  //   degree: 'High School Diploma',
+  //   institution: 'Your High School Name',
+  //   location: 'City, State',
+  //   period: '2017 - 2021',
+  //   gpa: '3.9/4.0',
+  //   status: 'Completed',
+  //   description: 'Graduated with honors, focusing on STEM subjects and early computer science exposure.',
+  //   coursework: [
+  //     'AP Computer Science A',
+  //     'AP Calculus BC',
+  //     'AP Physics C',
+  //     'AP Chemistry',
+  //     'Advanced Mathematics',
+  //     'Technical Writing'
+  //   ],
+  //   achievements: [
+  //     'Valedictorian (Top 1% of graduating class)',
+  //     'National Honor Society member',
+  //     'Science Fair Winner - Computer Science Category',
+  //     'Robotics Team Captain - State Championship'
+  //   ]
+  // }
 ];
 
 const certifications = [
   {
     name: 'AWS Certified Cloud Practitioner',
     issuer: 'Amazon Web Services',
-    date: '2023',
+    date: '2025',
     credentialId: 'AWS-CCP-12345'
   },
   {
     name: 'Google Analytics Certified',
     issuer: 'Google',
-    date: '2023',
+    date: '2025',
     credentialId: 'GA-67890'
   },
   {
     name: 'Microsoft Azure Fundamentals',
     issuer: 'Microsoft',
-    date: '2022',
+    date: '2026',
     credentialId: 'AZ-900-54321'
   },
   {
     name: 'React Developer Certification',
     issuer: 'Meta',
-    date: '2022',
+    date: '2026',
     credentialId: 'META-REACT-98765'
   }
 ];
