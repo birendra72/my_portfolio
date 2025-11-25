@@ -20,7 +20,7 @@ const skillCategories = [
     title: 'Frontend Development',
     icon: Globe,
     skills: [
-      { name: 'React.js', level: 90 },
+      { name: 'React.js', level: 85 },
       { name: 'Next.js', level: 85 },
       { name: 'Vue.js', level: 75 },
       { name: 'Tailwind CSS', level: 95 },
