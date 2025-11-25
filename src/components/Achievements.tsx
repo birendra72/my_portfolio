@@ -112,9 +112,9 @@ const achievements = [
 
 const stats = [
   { label: 'Hackathons Won', value: '', icon: Trophy },
-  { label: 'Open Source PRs', value: '25+', icon: Code },
+  { label: 'Open Source PRs', value: '5+', icon: Code },
   { label: 'Students Mentored', value: '50+', icon: Users },
-  { label: 'Projects Launched', value: '12', icon: Target },
+  { label: 'Projects Launched', value: '3', icon: Target },
 ];
 
 export const Achievements: React.FC = () => {

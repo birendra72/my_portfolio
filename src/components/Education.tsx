@@ -56,30 +56,47 @@ const education = [
   // }
 ];
 
+// Updated with data from your Resume
 const certifications = [
   {
-    name: 'AWS Certified Cloud Practitioner',
-    issuer: 'Amazon Web Services',
+    id: 1,
+    name: 'Oracle Cloud Infrastructure 2025 AI Foundations Associate',
+    issuer: 'Oracle',
     date: '2025',
-    credentialId: 'AWS-CCP-12345'
+    description: 'Foundational certification in AI concepts and Oracle Cloud Infrastructure AI services.',
+    url: 'https://catalog-education.oracle.com/pls/oci-grow/' // Placeholder or actual link if you have one
   },
   {
-    name: 'Google Analytics Certified',
-    issuer: 'Google',
-    date: '2025',
-    credentialId: 'GA-67890'
+    id: 2,
+    name: 'ChatGPT Prompt Engineering',
+    issuer: 'DeepLearning.AI',
+    date: '2025', // Assumed recent based on timeline
+    description: 'Comprehensive course on prompt engineering techniques for Large Language Models.',
+    url: 'https://www.deeplearning.ai/'
   },
   {
-    name: 'Microsoft Azure Fundamentals',
-    issuer: 'Microsoft',
-    date: '2026',
-    credentialId: 'AZ-900-54321'
+    id: 3,
+    name: 'Python Zero to Hero Course',
+    issuer: 'Guvi',
+    date: '2024', // Estimated
+    description: 'In-depth Python programming course covering fundamentals to advanced topics.',
+    url: 'https://www.guvi.in/'
   },
   {
-    name: 'React Developer Certification',
-    issuer: 'Meta',
-    date: '2026',
-    credentialId: 'META-REACT-98765'
+    id: 4,
+    name: 'Artificial Intelligence Workshop',
+    issuer: 'AI Academia',
+    date: 'May 2025',
+    description: 'Practical workshop focusing on Neural Networks and AI ethics.',
+    url: '#'
+  },
+  {
+    id: 5,
+    name: 'Online Internship in AI & Machine Learning',
+    issuer: 'NIELIT',
+    date: 'July 2025',
+    description: 'Intensive program on AI/ML using Python, covering data preprocessing and modeling.',
+    url: 'https://nielit.gov.in/'
   }
 ];
 
@@ -268,7 +285,7 @@ export const Education: React.FC = () => {
                   <p className="text-muted-foreground text-sm mb-2">{cert.issuer}</p>
                   <p className="text-muted-foreground text-xs mb-2">Earned: {cert.date}</p>
                   <p className="text-muted-foreground text-xs font-mono">
-                    ID: {cert.credentialId}
+                    {/* ID: {cert.credentialId} */}
                   </p>
                 </motion.div>
               ))}
