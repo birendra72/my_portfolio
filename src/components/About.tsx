@@ -5,7 +5,7 @@ import { BookOpen, Target, Lightbulb, Heart } from 'lucide-react';
 
 const stats = [
   { label: 'Years of Learning', value: '3+', icon: BookOpen },
-  { label: 'Projects Completed', value: '15+', icon: Target },
+  { label: 'Projects Completed', value: '10+', icon: Target },
   { label: 'Technologies Explored', value: '20+', icon: Lightbulb },
   { label: 'Coffee Cups', value: '∞', icon: Heart },
 ];

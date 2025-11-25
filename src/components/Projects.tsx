@@ -1,12 +1,50 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github, Filter, Code, Globe, Smartphone } from 'lucide-react';
+import { ExternalLink, Github, Filter, Code, Globe, Smartphone, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+// --- ACTIVE PROJECTS (FROM RESUME) ---
 const projects = [
   {
     id: 1,
+    title: 'Universal Analyst Model (UAM)',
+    description: 'A comprehensive data analytics and machine learning platform providing automated data analysis, visualization, and predictive modeling. Features both v1 (Streamlit) and v2 (Web) interfaces.',
+    image: '/uam.png',
+    category: 'AI/ML',
+    technologies: ['Python', 'Machine Learning', 'Streamlit', 'Vercel', 'Data Analytics'],
+    github: 'https://github.com', // Add your GitHub link if available
+    live: 'https://uam-project-v1-0.vercel.app/',
+    featured: true,
+  },
+  {
+    id: 2,
+    title: 'ChatBot FusionHub',
+    description: 'A web-based AI chatbot integration platform. Built with a robust Django backend and an immersive Three.js + GSAP frontend for engaging user interactions.',
+    image: '/api/placeholder/600/400',
+    category: 'Full Stack',
+    technologies: ['Django', 'Python', 'Three.js', 'GSAP', 'AI Integration'],
+    github: 'https://github.com',
+    live: '#', // Add link if available
+    featured: true,
+  },
+  {
+    id: 3,
+    title: 'Personal Portfolio',
+    description: 'Fully responsive and interactive personal portfolio website designed to showcase projects and technical skills.',
+    image: '/api/placeholder/600/400',
+    category: 'Frontend',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    github: 'https://github.com',
+    live: 'https://my-portfolio-lovat-phi-91.vercel.app/',
+    featured: true,
+  },
+];
+
+/* // --- ARCHIVED / FUTURE PROJECTS (COMMENTED OUT) ---
+const archivedProjects = [
+  {
+    id: 101,
     title: 'E-Commerce Platform',
     description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
     image: '/api/placeholder/600/400',
@@ -17,18 +55,7 @@ const projects = [
     featured: true,
   },
   {
-    id: 2,
-    title: 'ChatBotFusionHub',
-    description: 'Real-time chat application with AI integration using OpenAI API. Built with Next.js and Socket.io for seamless communication.',
-    image: '/api/placeholder/600/400',
-    category: 'AI/ML',
-    technologies: ['Next.js', 'OpenAI API', 'Socket.io', 'PostgreSQL', 'Prisma'],
-    github: 'https://github.com',
-    live: 'https://demo.com',
-    featured: true,
-  },
-  {
-    id: 3,
+    id: 103,
     title: 'Task Management Mobile App',
     description: 'Cross-platform mobile app for task management built with React Native. Features offline sync and push notifications.',
     image: '/api/placeholder/600/400',
@@ -39,7 +66,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 4,
+    id: 104,
     title: 'Weather Dashboard',
     description: 'Interactive weather dashboard with data visualization using Chart.js and weather API integration.',
     image: '/api/placeholder/600/400',
@@ -50,7 +77,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 5,
+    id: 105,
     title: 'DevOps Automation Tool',
     description: 'Docker-based automation tool for CI/CD pipelines with monitoring and alerting capabilities.',
     image: '/api/placeholder/600/400',
@@ -61,7 +88,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 6,
+    id: 106,
     title: 'Personal Finance Tracker',
     description: 'Web application for tracking personal finances with data visualization and budget planning features.',
     image: '/api/placeholder/600/400',
@@ -72,15 +99,16 @@ const projects = [
     featured: false,
   },
 ];
+*/
 
-const categories = ['All', 'Full Stack', 'Frontend', 'Mobile', 'AI/ML', 'DevOps'];
+const categories = ['All', 'AI/ML', 'Full Stack', 'Frontend'];
 
 const categoryIcons = {
   'All': Filter,
   'Full Stack': Code,
   'Frontend': Globe,
   'Mobile': Smartphone,
-  'AI/ML': Code,
+  'AI/ML': Brain,
   'DevOps': Code,
 };
 
@@ -122,13 +150,13 @@ export const Projects: React.FC = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              A showcase of my recent work and the technologies I've been exploring
+              A showcase of my recent work in AI, Machine Learning, and Web Development.
             </motion.p>
           </div>
 
           {/* Featured Projects */}
           <div className="mb-16">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
@@ -156,19 +184,19 @@ export const Projects: React.FC = () => {
                   {/* Project Content */}
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-semibold">{project.title}</h3>
-                      <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded">
+                      <h3 className="text-xl font-semibold truncate pr-2">{project.title}</h3>
+                      <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded whitespace-nowrap">
                         {project.category}
                       </span>
                     </div>
                     
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                    <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3">
                       {project.description}
                     </p>
 
                     {/* Technologies */}
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {project.technologies.map((tech) => (
+                      {project.technologies.slice(0, 4).map((tech) => (
                         <span key={tech} className="skill-badge text-xs">
                           {tech}
                         </span>
@@ -209,7 +237,7 @@ export const Projects: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             {categories.map((category) => {
-              const Icon = categoryIcons[category as keyof typeof categoryIcons];
+              const Icon = categoryIcons[category as keyof typeof categoryIcons] || Code;
               return (
                 <Button
                   key={category}

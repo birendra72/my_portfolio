@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Brain, Coffee } from 'lucide-react';
+
 import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from 'lucide-react';
 
 const socialLinks = [
@@ -173,16 +175,37 @@ export const Footer: React.FC = () => {
         <div className="py-6 border-t border-border/50">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex items-center space-x-2 text-sm text-muted-foreground"
-            >
-              <span>© {new Date().getFullYear()} Birendra Singh. Made with</span>
-              <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-              <span>and lots of coffee.</span>
-            </motion.div>
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="container flex flex-col items-center justify-center space-y-2 text-sm text-muted-foreground"
+      >
+        <div className="flex items-center space-x-2">
+          <span>© {new Date().getFullYear()} Birendra Singh. Made with</span>
+          
+          {/* Pulsing Brain Animation for AI/ML Profile */}
+          <motion.div
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity,
+              ease: "easeInOut" 
+            }}
+          >
+            <Brain className="w-4 h-4 text-indigo-500" />
+          </motion.div>
+          
+          <span>and data-driven passion.</span>
+        </div>
+        
+        {/* Optional secondary line */}
+        <div className="flex items-center text-xs opacity-70">
+          <span>Fueled by</span>
+          <Coffee className="w-3 h-3 mx-1" />
+          <span>and Neural Networks</span>
+        </div>
+      </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}

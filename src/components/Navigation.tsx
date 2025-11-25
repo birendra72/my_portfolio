@@ -56,7 +56,7 @@ export const Navigation: React.FC = () => {
   const downloadResume = () => {
     // You can replace this with actual resume download logic
     const link = document.createElement('a');
-    link.href = '/BirendraSingh_Resume.pdf'; // Add your resume file to the public folder
+    link.href = '/BirendraSinghResume1.pdf'; // Add your resume file to the public folder
     link.download = 'BirendraSinghResume.pdf';
     link.click();
   };

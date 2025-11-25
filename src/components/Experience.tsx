@@ -6,70 +6,35 @@ import { Calendar, MapPin, ExternalLink, Building } from 'lucide-react';
 const experiences = [
   {
     id: 1,
-    title: 'Software Development Intern',
-    company: 'Tech Innovation Labs',
-    location: 'San Francisco, CA (Remote)',
-    period: 'June 2023 - August 2023',
+    title: 'AI & ML Intern',
+    company: 'NIELIT',
+    location: 'Online',
+    period: 'June 2025 - July 2025',
     type: 'Internship',
-    description: 'Developed and maintained web applications using React and Node.js. Collaborated with senior developers on feature implementation and code reviews.',
+    description: 'Completed an intensive online internship focused on Artificial Intelligence and Machine Learning using Python.',
     achievements: [
-      'Built a customer dashboard that improved user engagement by 25%',
-      'Optimized database queries resulting in 40% faster load times',
-      'Participated in agile development processes and daily standups',
-      'Contributed to open-source projects and documented best practices'
+      'Gained hands-on experience in data preprocessing and analysis',
+      'Worked on model training and evaluation using Python libraries',
+      'Applied algorithmic problem-solving techniques to real-world scenarios',
+      'Mastered core concepts of Machine Learning pipelines'
     ],
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Git'],
-    website: 'https://example.com'
+    technologies: ['Python', 'Machine Learning', 'Data Analysis', 'AI Algorithms'],
+    website: null
   },
   {
     id: 2,
-    title: 'Full Stack Developer',
-    company: 'StartupXYZ',
-    location: 'Austin, TX (Hybrid)',
-    period: 'September 2023 - Present',
-    type: 'Part-time',
-    description: 'Leading frontend development for a fintech startup. Responsible for creating responsive web applications and implementing new features.',
+    title: 'AI Intern (Workshop)',
+    company: 'AI Academia',
+    location: 'Hybrid',
+    period: 'May 2025',
+    type: 'Internship',
+    description: 'Participated in a comprehensive workshop focused on Artificial Intelligence fundamentals and emerging technologies.',
     achievements: [
-      'Developed the main product dashboard from scratch',
-      'Implemented secure payment processing integration',
-      'Reduced application bundle size by 30% through optimization',
-      'Mentored junior developers and conducted code reviews'
+      'Collaborated on minor projects involving neural network concepts',
+      'Studied AI ethics and future implications of artificial intelligence',
+      'Explored practical applications of AI in modern software'
     ],
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe API', 'Vercel'],
-    website: 'https://example.com'
-  },
-  {
-    id: 3,
-    title: 'Research Assistant',
-    company: 'University Computer Science Department',
-    location: 'Local Campus',
-    period: 'January 2023 - May 2023',
-    type: 'Research',
-    description: 'Assisted in machine learning research project focused on natural language processing and data analysis.',
-    achievements: [
-      'Contributed to research paper on sentiment analysis algorithms',
-      'Developed data preprocessing pipelines using Python',
-      'Presented findings at undergraduate research symposium',
-      'Collaborated with PhD students on experimental design'
-    ],
-    technologies: ['Python', 'TensorFlow', 'Pandas', 'Jupyter', 'NLTK'],
-    website: 'https://example.com'
-  },
-  {
-    id: 4,
-    title: 'Freelance Web Developer',
-    company: 'Self-Employed',
-    location: 'Remote',
-    period: 'March 2022 - December 2022',
-    type: 'Freelance',
-    description: 'Provided web development services to small businesses and startups. Created custom websites and web applications.',
-    achievements: [
-      'Delivered 8+ successful projects for various clients',
-      'Maintained 100% client satisfaction rate',
-      'Developed e-commerce solutions increasing client sales by 60%',
-      'Built long-term relationships with repeat clients'
-    ],
-    technologies: ['WordPress', 'Shopify', 'React', 'PHP', 'MySQL'],
+    technologies: ['Artificial Intelligence', 'Neural Networks', 'Deep Learning Concepts'],
     website: null
   }
 ];
@@ -112,7 +77,7 @@ export const Experience: React.FC = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              My journey through various roles and the impact I've made along the way
+              My professional journey in Artificial Intelligence and Software Development.
             </motion.p>
           </div>
 
@@ -142,7 +107,7 @@ export const Experience: React.FC = () => {
                       <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-2">
                           <h3 className="text-xl font-semibold">{experience.title}</h3>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium border ${typeColors[experience.type as keyof typeof typeColors]}`}>
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium border ${typeColors[experience.type as keyof typeof typeColors] || 'bg-gray-500/10 text-gray-500 border-gray-500/20'}`}>
                             {experience.type}
                           </span>
                         </div>
@@ -180,7 +145,7 @@ export const Experience: React.FC = () => {
 
                     {/* Achievements */}
                     <div className="mb-6">
-                      <h4 className="font-semibold mb-3">Key Achievements:</h4>
+                      <h4 className="font-semibold mb-3">Key Learnings & Contributions:</h4>
                       <ul className="space-y-2">
                         {experience.achievements.map((achievement, achIndex) => (
                           <motion.li
@@ -231,7 +196,7 @@ export const Experience: React.FC = () => {
               <h3 className="text-2xl font-semibold mb-4">Looking for New Opportunities</h3>
               <p className="text-muted-foreground mb-6">
                 I'm always interested in challenging projects and collaborative opportunities. 
-                Whether it's a full-time position, internship, or freelance project, I'd love to hear from you!
+                Whether it's a full-time position or internship, I'd love to hear from you!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
@@ -241,7 +206,7 @@ export const Experience: React.FC = () => {
                   Get In Touch
                 </button>
                 <button
-                  onClick={() => window.open('/resume.pdf', '_blank')}
+                  onClick={() => window.open('/BirendraSinghResume1.pdf', '_blank')}
                   className="btn-secondary"
                 >
                   Download Resume
